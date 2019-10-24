@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import "./style.scss"
 import Layout from "../components/layout"
 import Image from "../components/image"
+import ShowList from "../components/showList"
+
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -13,7 +15,10 @@ const IndexPage = () => (
       <div style={{ margin: "auto", maxWidth: `200px`, opacity: 0.8 }}>
         <Image />
       </div>
-      <h1 style={{ textAlign: "center", marginTop: "-20px", fontSize: 55 }}>
+      <h1
+        className="title is-1"
+        style={{ textAlign: "center", marginTop: "-20px", fontSize: 55 }}
+      >
         ffp3
       </h1>
     </div>
@@ -41,49 +46,14 @@ const IndexPage = () => (
         borderTop: "solid 10px Gainsboro",
       }}
     ></div>
+    <ShowList />
     <div
       style={{
-        border: "solid 3px WhiteSmoke",
-        padding: 16,
-        marginBottom: 10,
-        borderRadius: 7,
+        margin: "50px auto",
+        maxWidth: "400px",
+        borderTop: "solid 10px Gainsboro",
       }}
-    >
-      <h2>FFP3 Ep.1 - Hong Kong - Camille</h2>
-      <p>Entretien avec Camille</p>
-      <iframe
-        width="100%"
-        height="120"
-        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Faudioculture%2Faudio-culture-002-mary-anne-hobbs%2F"
-        frameborder="0"
-      ></iframe>
-    </div>
-    <div
-      style={{
-        border: "solid 3px WhiteSmoke",
-        padding: 16,
-        marginBottom: 10,
-        borderRadius: 7,
-      }}
-    >
-      <h2>CBO Ep.5 - Brigades Rouges - Barbara Balzerani</h2>
-      <p>
-        Lourdement condamnée, libérée mais non repentie, l’ancienne directrice
-        stratégique des Brigades Rouges Barbara Balzerani avait déjà fiché une
-        solide étoile dans le ciel partisan des révolutionnaires avec Camarade
-        Lune, paru aux éditions Cambourakis en 2017. En reprenant la main sur
-        son histoire, elle poursuit aujourd’hui sur CBO la transmission de cet
-        héritage.
-      </p>
-      <iframe
-        width="100%"
-        height="60"
-        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fmaisondelagr%C3%A8ve%2Fles-brigades-rouges-barbara-balzerani-cbo-podcast-5-juin-2019%2F"
-        frameborder="0"
-      ></iframe>
-    </div>
-
-    <Link to="/page-2/">Go to page 2</Link>
+    ></div>
   </Layout>
 )
 
