@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { renderHtmlToReact } from "../utils/html"
+import Show from "./show"
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -15,13 +15,18 @@ import { renderHtmlToReact } from "../utils/html"
 const ShowList = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             frontmatter {
               avec
               date
               title
+              url
+              image
+              show
+              episode
+              subject
             }
             htmlAst
           }
@@ -33,11 +38,17 @@ const ShowList = () => {
   return (
     <div>
       {data.allMarkdownRemark.edges.map(s => (
-        <div className="box">
-          <h2 class="title is-3">{s.node.frontmatter.title}</h2>
-          <p class="subtitle is-5">avec {s.node.frontmatter.avec}</p>
-          <div class="content">{renderHtmlToReact(s.node.htmlAst)}</div>
-        </div>
+        <Show
+          avec={s.node.frontmatter.avec}
+          date={s.node.frontmatter.date}
+          title={s.node.frontmatter.title}
+          url={s.node.frontmatter.url}
+          image={s.node.frontmatter.image}
+          show={s.node.frontmatter.show}
+          episode={s.node.frontmatter.episode}
+          subject={s.node.frontmatter.subject}
+          htmlAst={s.node.htmlAst}
+        />
       ))}
     </div>
   )

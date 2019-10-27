@@ -11,47 +11,83 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div>
-      <div style={{ margin: "auto", maxWidth: `200px`, opacity: 0.8 }}>
-        <Image />
+    <section className="section">
+      <div style={{ margin: "auto", maxWidth: 600 }}>
+        <div
+          className="upper"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}
+        >
+          <div
+            className="logo-and-title"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div style={{ width: `200px`, opacity: 0.8 }}>
+              <Image />
+            </div>
+            <h1
+              className="title is-1 is-family-sans-serif"
+              style={{ textAlign: "center", marginTop: "-20px", fontSize: 55 }}
+            >
+              . ffp3 .
+            </h1>
+          </div>
+
+          <div
+            className="description"
+            style={{
+              display: "flex",
+              margin: "20px auto 7px auto",
+              width: 300,
+              flexDirection: "column",
+              justifyContent: "end",
+            }}
+          >
+            <h2 className="subtitle is-4 is-family-primary" style={{ textAlign: "left" }}>
+              Podcast d'entretiens avec celles et ceux qui, à travers le monde,
+              restent malgré les gazs.
+            </h2>
+          </div>
+        </div>
+        <div
+          className="lower"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            flex: 1,
+            margin: "20px 10px",
+          }}
+        >
+          <button style={{ margin: 10 }} class="button is-small is-info is-family-sans-serif">
+            iTunes
+          </button>
+          <button style={{ margin: 10 }} class="button is-small is-primary is-family-sans-serif">
+            twitter
+          </button>
+          <button style={{ margin: 10 }} class="button is-small is-warning is-family-sans-serif">
+            RSS
+          </button>
+        </div>
       </div>
-      <h1
-        className="title is-1"
-        style={{ textAlign: "center", marginTop: "-20px", fontSize: 55 }}
-      >
-        ffp3
-      </h1>
-    </div>
+    </section>
+    <section>
+      <ShowList />
+    </section>
     <div
       style={{
         margin: "50px auto",
-        maxWidth: "400px",
-        borderTop: "solid 10px Gainsboro",
-      }}
-    ></div>
-    <div style={{ maxWidth: "800px", margin: "auto" }}>
-      <p style={{ textAlign: "center" }}>
-        FFP3 désigne la catégorie la plus efficace de masques anti-particules,
-        celle qui autorise à rester là où on ne devrait pas. C'est aussi un
-        podcast dans lequel on s'entretient avec celles et ceux qui, à travers
-        le monde, en ont l'usage.
-      </p>
-      <button class="button">Button</button>
-      <button class="button is-dark">Button</button>
-    </div>
-    <div
-      style={{
-        margin: "50px auto",
-        maxWidth: "400px",
-        borderTop: "solid 10px Gainsboro",
-      }}
-    ></div>
-    <ShowList />
-    <div
-      style={{
-        margin: "50px auto",
-        maxWidth: "400px",
-        borderTop: "solid 10px Gainsboro",
+        border: "solid 5px Gainsboro",
+        borderRadius: "2px"
       }}
     ></div>
   </Layout>
