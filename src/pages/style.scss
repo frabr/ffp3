@@ -11,6 +11,23 @@ $family-primary: $family-serif;
 
 
 
+.anti-button {
+  outline: none;
+  border: none;
+}
+.anti-button:active {
+  outline: none;
+  border: none;
+}
+.anti-button:focus {
+  outline: none;
+  border: none;
+}
+
+.anti-button::-moz-focus-inner {
+  border: 0;
+}
+
 
 
 

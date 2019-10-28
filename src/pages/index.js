@@ -11,8 +11,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <section className="section">
-      <div style={{ margin: "auto", maxWidth: 600 }}>
+    <section className="hero is-fullheight">
+      <div style={{ margin: "auto", maxWidth: 600, }}>
         <div
           className="upper"
           style={{
@@ -28,6 +28,7 @@ const IndexPage = () => (
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              marginRight: 30
             }}
           >
             <div style={{ width: `200px`, opacity: 0.8 }}>
@@ -46,12 +47,15 @@ const IndexPage = () => (
             style={{
               display: "flex",
               margin: "20px auto 7px auto",
-              width: 300,
+              maxWidth: 300,
               flexDirection: "column",
               justifyContent: "end",
             }}
           >
-            <h2 className="subtitle is-4 is-family-primary" style={{ textAlign: "left" }}>
+            <h2
+              className="subtitle is-4 is-family-primary"
+              style={{ textAlign: "left" }}
+            >
               Podcast d'entretiens avec celles et ceux qui, à travers le monde,
               restent malgré les gazs.
             </h2>
@@ -65,18 +69,33 @@ const IndexPage = () => (
             justifyContent: "space-between",
             flexWrap: "wrap",
             flex: 1,
-            margin: "20px 10px",
+            margin: "30px auto",
           }}
         >
-          <button style={{ margin: 10 }} class="button is-small is-info is-family-sans-serif">
+          <button
+            style={{ margin: 10, width: 140}}
+            class="button is-small is-info is-family-sans-serif"
+          >
             iTunes
           </button>
-          <button style={{ margin: 10 }} class="button is-small is-primary is-family-sans-serif">
+          <button
+            style={{ margin: 10, width: 140 }}
+            class="button is-small is-primary is-family-sans-serif"
+          >
             twitter
           </button>
-          <button style={{ margin: 10 }} class="button is-small is-warning is-family-sans-serif">
+          <button
+            style={{ margin: 10, width: 140 }}
+            class="button is-small is-warning is-family-sans-serif"
+          >
             RSS
           </button>
+          {/* <button
+            style={{ margin: 0, width: 120 }}
+            class="button is-small is-success is-family-sans-serif"
+          >
+            RSS
+          </button> */}
         </div>
       </div>
     </section>
@@ -87,7 +106,7 @@ const IndexPage = () => (
       style={{
         margin: "50px auto",
         border: "solid 5px Gainsboro",
-        borderRadius: "2px"
+        borderRadius: "2px",
       }}
     ></div>
   </Layout>

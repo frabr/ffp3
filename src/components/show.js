@@ -53,6 +53,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
               textDecoration: "none",
             }}
             onClick={togglePlay}
+            className="anti-button"
           >
             <span className="icon is-large">
               <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="2x" />
