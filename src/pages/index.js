@@ -53,7 +53,7 @@ const IndexPage = () => (
               margin: "20px auto 7px auto",
               maxWidth: 300,
               flexDirection: "column",
-              justifyContent: "end",
+              justifyContent: "flex-end",
             }}
           >
             <h2
