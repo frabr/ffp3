@@ -6,6 +6,7 @@ $primary: #55acee;
 $info: #CC45F2;
 $family-serif: "Lora", "Georgia", serif;
 $family-primary: $family-serif;
+$white: #f9f9f9;
 
 @import "~bulma/bulma.sass";
 
@@ -27,6 +28,38 @@ $family-primary: $family-serif;
 .anti-button::-moz-focus-inner {
   border: 0;
 }
+
+.lower{
+  justify-content: space-between,
+}
+.lower > button{
+  width: 140px
+}
+
+@include until($tablet) {
+  .desk-only{
+    display: none;
+  }
+  .lower{
+    justify-content: center;
+  }
+  .lower > button{
+    width: 60px
+  }
+}
+@include from($tablet) {
+  .mobile-only{
+    display: none;
+  }
+}
+
+
+
+// .track {
+//   background-color: $primary ;
+//   border: solid 5px $primary;
+//   border-radius: 3px;
+// }
 
 
 

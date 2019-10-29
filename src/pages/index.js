@@ -4,21 +4,22 @@ import "./style.scss"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import ShowList from "../components/showList"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Podcast" />
 
     <section className="hero is-fullheight">
-      <div style={{ margin: "auto", maxWidth: 600, }}>
+      <div style={{ margin: "auto", maxWidth: 600 }}>
         <div
           className="upper"
           style={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-around",
+            justifyContent: "center",
           }}
         >
           <div
@@ -28,7 +29,7 @@ const IndexPage = () => (
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              marginRight: 30
+              // margin: "auto 30px",
             }}
           >
             <div style={{ width: `200px`, opacity: 0.8 }}>
@@ -41,6 +42,9 @@ const IndexPage = () => (
               . ffp3 .
             </h1>
           </div>
+          
+          {/* div pour faire de la marge au sein du flex */}
+          <div style={{width: 30, height: 30}}></div>
 
           <div
             className="description"
@@ -57,7 +61,7 @@ const IndexPage = () => (
               style={{ textAlign: "left" }}
             >
               Podcast d'entretiens avec celles et ceux qui, à travers le monde,
-              restent malgré les gazs.
+              restent malgré les gaz.
             </h2>
           </div>
         </div>
@@ -66,26 +70,25 @@ const IndexPage = () => (
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
             flexWrap: "wrap",
             flex: 1,
             margin: "30px auto",
           }}
         >
           <button
-            style={{ margin: 10, width: 140}}
+            style={{ margin: 10}}
             class="button is-small is-info is-family-sans-serif"
           >
             iTunes
           </button>
           <button
-            style={{ margin: 10, width: 140 }}
+            style={{ margin: 10}}
             class="button is-small is-primary is-family-sans-serif"
           >
             twitter
           </button>
           <button
-            style={{ margin: 10, width: 140 }}
+            style={{ margin: 10}}
             class="button is-small is-warning is-family-sans-serif"
           >
             RSS
@@ -97,6 +100,17 @@ const IndexPage = () => (
             RSS
           </button> */}
         </div>
+      </div>
+      <div
+        className="hero-foot"
+        style={{ textAlign: "center", marginBottom: 20 }}
+      >
+        <h2 className="subtitle is-3" style={{ marginBottom: "-10px" }}>
+          <span className="tag is-dark is-large is-family-sans-serif">
+            Émissions
+          </span>
+        </h2>
+        <FontAwesomeIcon icon={faCaretDown} size="3x" color="rgba(0,0,0,0.8)" />
       </div>
     </section>
     <section>

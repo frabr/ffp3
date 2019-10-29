@@ -36,7 +36,7 @@ const ShowList = () => {
   `)
 
   return (
-    <div>
+    <div className="container">
       {data.allMarkdownRemark.edges.map(s => (
         <Show
           avec={s.node.frontmatter.avec}

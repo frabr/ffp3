@@ -2,13 +2,13 @@ import React from "react"
 import { renderHtmlToReact } from "../utils/html"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons"
-import { Range } from "react-range"
+import { Range, getTrackBackground } from "react-range"
 
 const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
   const player = React.useRef(null)
   const [isPlaying, setIsPlaying] = React.useState(false)
   const [currentTime, setCurrentTime] = React.useState(0)
-  const [duration, setDuration] = React.useState(null)
+  const [duration, setDuration] = React.useState(2)
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -23,8 +23,14 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
     player.current.addEventListener("timeupdate", e => {
       setCurrentTime(e.target.currentTime)
     })
-    return player.current.removeEventListener("timeupdate", () => {})
-  }, [])
+    player.current.addEventListener("loadedmetadata", e =>
+      setDuration(player.current.duration)
+    )
+    return () => {
+      player.current.removeEventListener("timeupdate", () => {})
+      player.current.removeEventListener("loadedmetadata", () => {})
+    }
+  }, [player])
 
   function getTime(time) {
     if (!isNaN(time)) {
@@ -35,78 +41,163 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
   }
 
   return (
-    <div>
-      <div
+    <>
+      {/* <p
+        className="title is-1 is-family-sans-serif"
+        style={{ textAlign: "center" }}
+      >
+        . . .
+      </p> */}
+      <div className="box" style={{ marginBottom: 50 }}>
+        {/* <div
         style={{
           margin: "50px auto",
           // border: "solid 5px Gainsboro",
           borderRadius: "2px",
         }}
-      ></div>
-      <article class="media">
-        <div class="media-left" style={{ alignSelf: "center" }}>
-          <button
-            style={{
-              background: "none",
-              border: "none",
-              useSelect: "none",
-              textDecoration: "none",
-            }}
-            onClick={togglePlay}
-            className="anti-button"
-          >
-            <span className="icon is-large">
-              <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="2x" />
-            </span>
-          </button>
-        </div>
-        <div class="media-content">
-          <h2 class="title is-3">{`${show} - ep.${episode} - “${title}”`}</h2>
-
-          <p class="subtitle is-5">{`${subject} avec ${avec}`}</p>
-          <div class="content">{renderHtmlToReact(htmlAst)}</div>
-          <audio
-            // style={{ width: "100%" }}
-            src={url}
-            ref={player}
-          />
-          <div>
-            {getTime(currentTime)} / {getTime(duration)}
+      ></div> */}
+        <article class="media">
+          <div class="media-left desk-only" style={{ alignSelf: "center" }}>
+            <button
+              style={{
+                background: "none",
+                border: "none",
+                useSelect: "none",
+                textDecoration: "none",
+              }}
+              onClick={togglePlay}
+              className="anti-button"
+            >
+              <span className="icon is-large">
+                <FontAwesomeIcon
+                  icon={isPlaying ? faPause : faPlay}
+                  size="2x"
+                />
+              </span>
+            </button>
           </div>
-          <Range
-            step={1}
-            min={0}
-            max={1000}
-            values={[currentTime, duration]}
-            onChange={values => console.log(values)}
-            renderTrack={({ props, children }) => (
-              <div
-                {...props}
-                style={{
-                  ...props.style,
-                  height: "6px",
-                  width: "100%",
-                  backgroundColor: "#ccc",
-                }}
-              >
-                {children}
+          <div class="media-content">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginBottom: 20,
+              }}
+            >
+              <div>
+                <h2 class="title is-3">“{title}”</h2>
+                <p class="subtitle is-5">{`${subject} avec ${avec}`}</p>
               </div>
-            )}
-            renderThumb={({ props }) => (
+              <div>
+                <p>
+                  <span
+                    style={{ margin: 5 }}
+                    className="tag is-dark is-family-sans-serif"
+                  >
+                    {show}
+                  </span>
+
+                  <span
+                    style={{ margin: 5 }}
+                    className="tag is-dark is-family-sans-serif"
+                  >
+                    #{episode}
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="content">{renderHtmlToReact(htmlAst)}</div>
+            <audio
+              // style={{ width: "100%" }}
+              src={url}
+              ref={player}
+            />
+            <div style={{ textAlign: "right", marginBottom: 10 }}>
+              <p class="subtitle is-5">
+                {getTime(currentTime)} / {getTime(duration)}
+              </p>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
               <div
-                {...props}
-                style={{
-                  ...props.style,
-                  height: "42px",
-                  width: "42px",
-                  backgroundColor: "#999",
+                class="media-left mobile-only"
+                style={{ alignSelf: "center" }}
+              >
+                <button
+                  style={{
+                    background: "none",
+                    border: "none",
+                    useSelect: "none",
+                    textDecoration: "none",
+                  }}
+                  onClick={togglePlay}
+                  className="anti-button"
+                >
+                  <span className="icon is-large">
+                    <FontAwesomeIcon
+                      icon={isPlaying ? faPause : faPlay}
+                      size="2x"
+                    />
+                  </span>
+                </button>
+              </div>
+
+              <Range
+                step={1}
+                min={0}
+                max={duration}
+                values={[currentTime]}
+                onChange={([time]) => {
+                  setCurrentTime(time)
+                  player.current.currentTime = time
                 }}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    style={{
+                      ...props.style,
+                      // height: "6px",
+                      height: "10px",
+                      width: "100%",
+                      // backgroundColor: "#ccc",
+                      margin: "10px auto",
+                      borderRadius: "3px",
+                      background: getTrackBackground({
+                        min: 0,
+                        max: duration,
+                        values: [currentTime],
+                        colors: ["#FF7F50", "#55acee"],
+                      }),
+                    }}
+                    className="track"
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    className="thumb"
+                    style={{
+                      ...props.style,
+                      height: "20px",
+                      width: "30px",
+                      backgroundColor: "#F9F9F9",
+                    }}
+                  />
+                )}
               />
-            )}
-          />
-        </div>
-      </article>
-    </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </>
   )
 }
 
