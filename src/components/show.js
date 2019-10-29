@@ -20,15 +20,17 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
     }
   }
   React.useEffect(() => {
-    player.current.addEventListener("timeupdate", e => {
+    // on copie player.current avant qu'il ne change
+    const specificPlayer = player.current
+    specificPlayer.addEventListener("timeupdate", e => {
       setCurrentTime(e.target.currentTime)
     })
-    player.current.addEventListener("loadedmetadata", e =>
-      setDuration(player.current.duration)
+    specificPlayer.addEventListener("loadedmetadata", e =>
+      setDuration(specificPlayer.duration)
     )
     return () => {
-      player.current.removeEventListener("timeupdate", () => {})
-      player.current.removeEventListener("loadedmetadata", () => {})
+      specificPlayer.removeEventListener("timeupdate", () => {})
+      specificPlayer.removeEventListener("loadedmetadata", () => {})
     }
   }, [player])
 
