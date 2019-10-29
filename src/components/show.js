@@ -22,15 +22,26 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
   React.useEffect(() => {
     // on copie player.current avant qu'il ne change
     const specificPlayer = player.current
+
     specificPlayer.addEventListener("timeupdate", e => {
       setCurrentTime(e.target.currentTime)
     })
-    specificPlayer.addEventListener("loadedmetadata", e =>
-      setDuration(specificPlayer.duration)
-    )
+
+    // 2 cas de figure
+    if (specificPlayer.duration) {
+      // le player est déjà chargé (et sa data avec) (le + souvent quand page caché)
+      setDuration(player.current.duration)
+    } else {
+      // le player n'est pas encore chargé, on lui colle un eventlistener 
+      specificPlayer.addEventListener("loadeddata", e => {
+        setDuration(player.current.duration)
+      })
+    }
+
+
     return () => {
       specificPlayer.removeEventListener("timeupdate", () => {})
-      specificPlayer.removeEventListener("loadedmetadata", () => {})
+      specificPlayer.removeEventListener("loadeddata", () => {})
     }
   }, [player])
 
