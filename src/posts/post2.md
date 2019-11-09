@@ -10,8 +10,7 @@ categories :
   - hongkong
 number: 1
 slug: "ffp3_0_hong_kong"
-url: https://ffp3.s3.eu-west-3.amazonaws.com/ffp3-HK-2.mp3
+url: https://ffp3.s3.eu-west-3.amazonaws.com/ffp3-HK-3.mp3
 image: https://ffp3.s3.eu-west-3.amazonaws.com/HK.jpeg
 ---
-
-Camille revient de Hong Kong, blabla la révolution blabla la Chine. Parfois je ne sais pas pourquoi je fais ce métier mais en même temps c'est passionant voilà.
+De retour de Hong Kong, Camille revient sur les courbes et les obliques du mouvement, où des coller des post-it...
