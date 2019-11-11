@@ -113,16 +113,10 @@ const IndexPage = () => (
         <FontAwesomeIcon icon={faCaretDown} size="3x" color="rgba(0,0,0,0.8)" />
       </div>
     </section>
-    <section>
+    <section style={{marginBottom: 200}}>
       <ShowList />
     </section>
-    <div
-      style={{
-        margin: "50px auto",
-        border: "solid 5px Gainsboro",
-        borderRadius: "2px",
-      }}
-    ></div>
+
   </Layout>
 )
 

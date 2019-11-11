@@ -19,6 +19,7 @@ const ShowList = () => {
         edges {
           node {
             frontmatter {
+              status
               avec
               date
               title
@@ -37,7 +38,7 @@ const ShowList = () => {
 
   return (
     <div className="container">
-      {data.allMarkdownRemark.edges.map(s => (
+      {data.allMarkdownRemark.edges.filter(s => s.node.frontmatter.status === "published").map(s => (
         <Show
           avec={s.node.frontmatter.avec}
           date={s.node.frontmatter.date}
