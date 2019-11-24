@@ -15,8 +15,8 @@ export default ({ data }) => {
     <html>
       <Helmet>
         <meta name="twitter:card" content="player"/>
-        <meta name="twitter:player" content="https://www.ffp3.live/ffp3_0_hong_kong/"/>
-        <meta name="twitter:secureurl:player_url" content="https://www.ffp3.live/ffp3_0_hong_kong/"/>
+        <meta name="twitter:player" content={post.frontmatter.url}/>
+        <meta name="twitter:secureurl:player_url" content={post.frontmatter.url}/>
 
         <meta name="twitter:player:width" content="500"/>
         <meta name="twitter:player:height" content="200"/>
