@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import Show from "../components/show"
 import { Helmet } from "react-helmet"
 import "../components/layout.css"
+import "../pages/style.scss"
+
 
 
 export default ({ data }) => {
