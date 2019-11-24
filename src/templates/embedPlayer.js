@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Show from "../components/show"
 import { Helmet } from "react-helmet"
-import "./layout.css"
+import "..components/layout.css"
 
 
 export default ({ data }) => {
