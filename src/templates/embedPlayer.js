@@ -32,7 +32,7 @@ export default ({ data }) => {
         show={post.frontmatter.show}
         episode={post.frontmatter.episode}
         subject={post.frontmatter.subject}
-        htmlAst=""
+        htmlAst={post.htmlAst}
       />
     </html>
   )
