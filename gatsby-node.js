@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/embedPlayer.js`),
+      component: path.resolve(`./src/templates/post.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/embed/${node.fields.slug}`,
+      path: `/embed${node.fields.slug}`,
       component: path.resolve(`./src/templates/embedPlayer.js`),
       context: {
         // Data passed to context is available
