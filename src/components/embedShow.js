@@ -61,7 +61,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
       >
         . . .
       </p> */}
-      <div className="box" style={{ marginBottom: 50 }}>
+      {/* <div className="box" style={{ marginBottom: 50 }}> */}
         {/* <div
         style={{
           margin: "50px auto",
@@ -209,7 +209,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
             </div>
           </div>
         </article>
-      </div>
+      {/* </div> */}
     </>
   )
 }
