@@ -21,9 +21,7 @@ export default ({ data }) => {
         <meta name="twitter:player:width" content="500"/>
         <meta name="twitter:player:height" content="200"/>
         <meta name="twitter:title" content="HK"/>
-        {/* <meta charSet="utf-8" />
-        <title>My Title</title>
-        <link rel="canonical" href="http://mysite.com/example" /> */}
+
       </Helmet>
       <Show
         avec={post.frontmatter.avec}
