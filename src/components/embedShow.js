@@ -6,7 +6,7 @@ import { Range, getTrackBackground } from "react-range"
 
 const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
   const player = React.useRef(null)
-  const [isPlaying, setIsPlaying] = React.useState(true)
+  const [isPlaying, setIsPlaying] = React.useState(false)
   const [currentTime, setCurrentTime] = React.useState(0)
   const [duration, setDuration] = React.useState(2)
 
@@ -20,6 +20,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
     }
   }
   React.useEffect(() => {
+    togglePlay()
     // on copie player.current avant qu'il ne change
     const specificPlayer = player.current
 
@@ -69,7 +70,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
           borderRadius: "2px",
         }}
       ></div> */}
-        <article class="media">
+        <article class="media" style={{padding: 20}}>
           <div class="media-left desk-only" style={{ alignSelf: "center" }}>
             <button
               style={{
