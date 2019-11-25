@@ -120,7 +120,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
               </div>
             </div>
 
-            <div class="content">{renderHtmlToReact(htmlAst)}</div>
+            {htmlAst && <div class="content">{renderHtmlToReact(htmlAst)}</div>}
             <audio
               // style={{ width: "100%" }}
               src={url}
