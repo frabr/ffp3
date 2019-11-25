@@ -20,7 +20,7 @@ export default ({ data }) => {
 
         <meta name="twitter:player:width" content="500"/>
         <meta name="twitter:player:height" content="200"/>
-        <meta name="twitter:title" content="HK"/>
+        <meta name="twitter:title" content="Hong Kong"/>
 
       </Helmet>
       <Show
