@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Show from "../components/show"
+import EmbedShow from "../components/embedShow"
 import { Helmet } from "react-helmet"
 import "../components/layout.css"
 import "../pages/style.scss"
@@ -10,7 +10,7 @@ import "../pages/style.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(post.htmlAst)
+  console.log(post)
   return (
     <html>
       <Helmet>
@@ -23,7 +23,7 @@ export default ({ data }) => {
         <meta name="twitter:title" content="Hong Kong"/>
 
       </Helmet>
-      <Show
+      <EmbedShow
         avec={post.frontmatter.avec}
         date={post.frontmatter.date}
         title={post.frontmatter.title}
