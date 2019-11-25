@@ -10,7 +10,7 @@ import "../pages/style.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(post)
+  console.log(post.htmlAst)
   return (
     <html>
       <Helmet>
