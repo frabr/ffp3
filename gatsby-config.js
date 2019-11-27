@@ -30,6 +30,9 @@ const feedOptions = {
       ],
     },
     {
+      "itunes:image": "no",
+    },
+    {
       "itunes:image": {
         _attr: {
           href: "https://ffp3.live/ffp3-big.png",
