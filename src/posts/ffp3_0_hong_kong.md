@@ -10,7 +10,7 @@ categories :
   - hongkong
 number: 1
 slug: "ffp3_0_hong_kong"
-url: "https://ffp3.s3.eu-west-3.amazonaws.com/ffp"
+url: "https://ffp3.s3.eu-west-3.amazonaws.com/ffp3-HK-3-new.mp3"
 image: https://ffp3.s3.eu-west-3.amazonaws.com/HK.jpeg
 status: "published"
 ---
