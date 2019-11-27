@@ -26,7 +26,7 @@ const feedOptions = {
     {
       "itunes:owner": [
         { "itunes:name": "FFP3" },
-        { "itunes:email": "ffp3.live@gmail.com" },
+        { "itunes:email": "brault.fra@gmail.com" },
       ],
     },
     {
