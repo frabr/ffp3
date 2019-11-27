@@ -10,17 +10,17 @@ import "../pages/style.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(post)
+  console.log(data)
   return (
     <html>
       <Helmet>
         <meta name="twitter:card" content="player"/>
-        <meta name="twitter:player" content="https://www.ffp3.live/ffp3_0_hong_kong/"/>
-        <meta name="twitter:secureurl:player_url" content="https://www.ffp3.live/ffp3_0_hong_kong/"/>
+        <meta name="twitter:player" content={`https://www.ffp3.live${post.fields.slug}`} />
+        <meta name="twitter:secureurl:player_url" content={`https://www.ffp3.live${post.fields.slug}`} />
 
         <meta name="twitter:player:width" content="500"/>
         <meta name="twitter:player:height" content="200"/>
-        <meta name="twitter:title" content="Hong Kong"/>
+        <meta name="twitter:title" content={post.frontmatter.title} />
 
       </Helmet>
       <EmbedShow
@@ -40,6 +40,7 @@ export default ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields { slug }
       htmlAst
       frontmatter {
         status

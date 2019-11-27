@@ -2,7 +2,12 @@ import React from "react"
 import "../pages/style.scss"
 import Image from "../components/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCaretDown,
+  faRss,
+  faPodcast,
+} from "@fortawesome/free-solid-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 const Hero = () => {
   return (
@@ -72,29 +77,29 @@ const Hero = () => {
           <a href="https://google.fr" style={{ margin: 10 }}>
             <button
               class="button is-small is-info is-family-sans-serif"
-              style={{width: 120 }}
-
+              style={{ width: 120 }}
             >
+              <FontAwesomeIcon icon={faPodcast} style={{ marginRight: 10 }} />
               iTunes
             </button>
           </a>
           <a href="https://twitter.com/FFP3_podcast" style={{ margin: 10 }}>
-          <button
-            class="button is-small is-primary is-family-sans-serif"
-            style={{width: 120 }}
-
-          >
-            twitter
-          </button>
+            <button
+              class="button is-small is-primary is-family-sans-serif"
+              style={{ width: 120 }}
+            >
+              <FontAwesomeIcon icon={faTwitter} style={{ marginRight: 10 }} />
+              twitter
+            </button>
           </a>
           <a href="/rss.xml" style={{ margin: 10 }}>
-
-          <button
-            class="button is-small is-warning is-family-sans-serif"
-            style={{width: 120 }}
-          >
-            RSS
-          </button>
+            <button
+              class="button is-small is-warning is-family-sans-serif"
+              style={{ width: 120 }}
+            >
+              <FontAwesomeIcon icon={faRss} style={{ marginRight: 10 }} />
+              RSS
+            </button>
           </a>
         </div>
       </div>
