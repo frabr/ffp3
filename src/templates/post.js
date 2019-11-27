@@ -91,7 +91,7 @@ export default ({ data }) => {
               </h2>
             </div>
           </div>
-          {/* <div
+          <div
             className="lower"
             style={{
               display: "flex",
@@ -119,7 +119,7 @@ export default ({ data }) => {
             >
               RSS
             </button>
-          </div> */}
+          </div>
         </div>
         </section>
 
