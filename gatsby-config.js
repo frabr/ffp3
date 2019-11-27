@@ -32,7 +32,7 @@ const feedOptions = {
     {
       "itunes:image": {
         _attr: {
-          href: "https://ffp3.live/ffp3-white.png",
+          href: "https://ffp3.live/ffp3-big.png",
         },
       },
     },
