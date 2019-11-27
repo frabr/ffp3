@@ -30,7 +30,7 @@ const feedOptions = {
       ],
     },
     {
-      "itunes:image": "no",
+      "itunes:explicit": "no",
     },
     {
       "itunes:image": {
