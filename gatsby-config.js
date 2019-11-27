@@ -102,7 +102,7 @@ module.exports = {
 
     // Pour le feed RSS
     {
-      resolve: `gatsby-plugin-podcast-feed`,
+      resolve: `gatsby-plugin-podcast-rss-feed`,
       options: {
         feedOptions,
       },
