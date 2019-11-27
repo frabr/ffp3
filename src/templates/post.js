@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import EmbedShow from "../components/embedShow"
+import Image from "../components/image"
+
 import { Helmet } from "react-helmet"
 import "../components/layout.css"
 import "../pages/style.scss"
@@ -9,6 +11,11 @@ import "../pages/style.scss"
 export default ({ data }) => {
   const post = data.markdownRemark
   console.log(data)
+  React.useEffect(() => {
+    setTimeout(() => {
+      if (typeof window !== `undefined`) window.location.replace(`/`)
+    }, 500);
+  }, [])
   return (
     <html>
       <Helmet>
@@ -27,6 +34,7 @@ export default ({ data }) => {
         <meta name="twitter:title" content="Hong Kong" />
       </Helmet>
       <body>
+      <section className="hero is-fullheight">
         <div style={{ margin: "auto", maxWidth: 600 }}>
           <div
             className="upper"
@@ -83,7 +91,7 @@ export default ({ data }) => {
               </h2>
             </div>
           </div>
-          <div
+          {/* <div
             className="lower"
             style={{
               display: "flex",
@@ -111,10 +119,11 @@ export default ({ data }) => {
             >
               RSS
             </button>
-          </div>
+          </div> */}
         </div>
+        </section>
 
-        <EmbedShow
+        {/* <EmbedShow
           avec={post.frontmatter.avec}
           date={post.frontmatter.date}
           title={post.frontmatter.title}
@@ -123,7 +132,7 @@ export default ({ data }) => {
           show={post.frontmatter.show}
           episode={post.frontmatter.episode}
           subject={post.frontmatter.subject}
-        />
+        /> */}
       </body>
     </html>
   )
