@@ -1,37 +1,38 @@
+
 const feedOptions = {
-  title: "title",
-  description: "description",
-  feed_url: "http://example.com/rss.xml",
-  site_url: "http://example.com",
-  image_url: "http://example.com/icon.png",
-  docs: "http://example.com/rss/docs.html",
-  managingEditor: "Dylan Greene",
-  webMaster: "Dylan Greene",
-  copyright: "2013 Dylan Greene",
-  language: "en",
-  categories: ["politics", "pouloulou"],
+  title: "FFP3",
+  description: "Podcast d'entretiens politiques",
+  feed_url: "https://ffp3.live/rss.xml",
+  site_url: "https://ffp3.live",
+  image_url: "https://ffp3.live/ffp3-white.png",
+  docs: "http://ffp3.live/rss/docs.html",
+  managingEditor: "FFP3",
+  webMaster: "FAT77",
+  copyright: "2019 FFP3",
+  language: "fr",
+  categories: ["politics"],
   pubDate: "May 20, 2019 04:00:00 GMT",
   ttl: "60",
   custom_namespaces: {
     itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
   },
   custom_elements: [
-    { "itunes:subtitle": "A show about everything" },
-    { "itunes:author": "John Doe" },
+    { "itunes:subtitle": "Podcast d'entretiens politiques" },
+    { "itunes:author": "FFP3" },
     {
       "itunes:summary":
-        "All About Everything is a show about everything. Each week we dive into any subject known to man and talk about it as much as we can. Look for our podcast in the Podcasts app or in the iTunes Store",
+      "Podcast d'entretiens avec celles et ceux qui, à travers le monde, restent malgré les gaz.",
     },
     {
       "itunes:owner": [
-        { "itunes:name": "John Doe" },
-        { "itunes:email": "john.doe@example.com" },
+        { "itunes:name": "FFP3" },
+        { "itunes:email": "ffp3.live@gmail.com" },
       ],
     },
     {
       "itunes:image": {
         _attr: {
-          href: "http://example.com/podcasts/everything/AllAboutEverything.jpg",
+          href: "https://ffp3.live/ffp3-white.png",
         },
       },
     },
@@ -39,7 +40,7 @@ const feedOptions = {
       "itunes:category": [
         {
           _attr: {
-            text: "Technology",
+            text: "Politics",
           },
         },
         {
@@ -57,7 +58,7 @@ const feedOptions = {
 module.exports = {
   siteMetadata: {
     title: `ffp3`,
-    description: `Podcast d'entretiens avec celles et ceux qui, à travers le monde, restent malgré les gaz.`,
+    description: `Podcast d'entretiens politiques.`,
     author: `frabr`,
   },
   plugins: [
@@ -80,7 +81,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ffp3-white-stretch.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`, // Rajouté pour Bulma
