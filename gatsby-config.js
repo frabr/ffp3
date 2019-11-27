@@ -2,10 +2,10 @@
 const feedOptions = {
   title: "FFP3",
   description: "Podcast d'entretiens politiques",
-  feed_url: "https://ffp3.live/rss.xml",
-  site_url: "https://ffp3.live",
-  image_url: "https://ffp3.live/ffp3-white.png",
-  docs: "http://ffp3.live/rss/docs.html",
+  feed_url: "https://www.ffp3.live/rss.xml",
+  site_url: "https://www.ffp3.live",
+  image_url: "https://www.ffp3.live/ffp3-white.png",
+  docs: "http://www.ffp3.live/rss/docs.html",
   managingEditor: "FFP3",
   webMaster: "FAT77",
   copyright: "2019 FFP3",
@@ -35,7 +35,7 @@ const feedOptions = {
     {
       "itunes:image": {
         _attr: {
-          href: "https://ffp3.live/ffp3-big.png",
+          href: "https://www.ffp3.live/ffp3-big.png",
         },
       },
     },
