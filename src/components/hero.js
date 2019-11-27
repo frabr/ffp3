@@ -7,7 +7,7 @@ import {
   faRss,
   faPodcast,
 } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faSpotify } from "@fortawesome/free-brands-svg-icons"
 
 const Hero = () => {
   return (
@@ -77,25 +77,37 @@ const Hero = () => {
           <a href="https://google.fr" style={{ margin: 10 }}>
             <button
               class="button is-small is-info is-family-sans-serif"
-              style={{ width: 120 }}
+              style={{ width: 100 }}
             >
               <FontAwesomeIcon icon={faPodcast} style={{ marginRight: 10 }} />
               iTunes
             </button>
           </a>
+          <a
+            href="https://podcasters.spotify.com/podcast/34lsXTjKmlObJaL3Ae481d"
+            style={{ margin: 10 }}
+          >
+            <button
+              class="button is-small is-success is-family-sans-serif"
+              style={{ width: 100 }}
+            >
+              <FontAwesomeIcon icon={faSpotify} style={{ marginRight: 10 }} />
+              Spotify
+            </button>
+          </a>
           <a href="https://twitter.com/FFP3_podcast" style={{ margin: 10 }}>
             <button
               class="button is-small is-primary is-family-sans-serif"
-              style={{ width: 120 }}
+              style={{ width: 100 }}
             >
               <FontAwesomeIcon icon={faTwitter} style={{ marginRight: 10 }} />
-              twitter
+              Twitter
             </button>
           </a>
           <a href="/rss.xml" style={{ margin: 10 }}>
             <button
               class="button is-small is-warning is-family-sans-serif"
-              style={{ width: 120 }}
+              style={{ width: 100 }}
             >
               <FontAwesomeIcon icon={faRss} style={{ marginRight: 10 }} />
               RSS
