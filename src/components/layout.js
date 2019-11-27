@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built by LaserCats
+          © {new Date().getFullYear()}, Built by <a href="https://fat77.org">FAT77</a>
         </footer>
       </div>
     </>
