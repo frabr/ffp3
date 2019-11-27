@@ -84,7 +84,7 @@ const Hero = () => {
             </button>
           </a>
           <a
-            href="https://podcasters.spotify.com/podcast/34lsXTjKmlObJaL3Ae481d"
+            href="https://open.spotify.com/show/34lsXTjKmlObJaL3Ae481d"
             style={{ margin: 10 }}
           >
             <button
