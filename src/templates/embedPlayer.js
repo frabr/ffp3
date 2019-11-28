@@ -30,7 +30,7 @@ export default ({ data }) => {
         url={post.frontmatter.url}
         image={post.frontmatter.image}
         show={post.frontmatter.show}
-        episode={post.frontmatter.episode}
+        number={post.frontmatter.number}
         subject={post.frontmatter.subject}
       />
     </html>
@@ -50,7 +50,7 @@ export const query = graphql`
         url
         image
         show
-        episode
+        number
         subject
       }
     }

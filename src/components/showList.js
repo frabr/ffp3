@@ -26,7 +26,7 @@ const ShowList = () => {
               url
               image
               show
-              episode
+              number
               subject
             }
             htmlAst
@@ -46,7 +46,7 @@ const ShowList = () => {
           url={s.node.frontmatter.url}
           image={s.node.frontmatter.image}
           show={s.node.frontmatter.show}
-          episode={s.node.frontmatter.episode}
+          number={s.node.frontmatter.number}
           subject={s.node.frontmatter.subject}
           event={s.node.frontmatter.event}
           htmlAst={s.node.htmlAst}

@@ -4,7 +4,6 @@ avec: "Camille"
 subject: "Hong Kong"
 title: "No leader, be water"
 show: "FFP3"
-episode: 0
 categories :
   - politics
   - hongkong

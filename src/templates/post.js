@@ -32,7 +32,7 @@ export default ({ data }) => {
         <meta name="twitter:player:width" content="320" />
         <meta name="twitter:player:height" content="200" />
         <meta name="twitter:image" content="https://www.ffp3.live/ffp3-white.png" />        
-        <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta name="twitter:title" content={`Ep.${post.frontmatter.number} ${post.frontmatter.title}`} />
       </Helmet>
       <body>
       <Hero/>
@@ -54,7 +54,7 @@ export const query = graphql`
         url
         image
         show
-        episode
+        number
         subject
       }
     }
