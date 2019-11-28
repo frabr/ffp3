@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
 
           {/* div pour faire de la marge au sein du flex */}
-          <div style={{ width: 30, height: 30 }}></div>
+          {/* <div style={{ width: 30, height: 30 }}></div> */}
 
           <div
             className="description"
@@ -57,7 +57,7 @@ const Hero = () => {
           >
             <h2
               className="subtitle is-4 is-family-primary"
-              style={{ textAlign: "left" }}
+              style={{margin: 20, textAlign: "left" }}
             >
               Podcast d'entretiens avec celles et ceux qui, à travers le monde,
               restent malgré les gaz.

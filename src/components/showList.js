@@ -28,6 +28,7 @@ const ShowList = () => {
               show
               episode
               subject
+              event
             }
             htmlAst
           }
@@ -48,6 +49,7 @@ const ShowList = () => {
           show={s.node.frontmatter.show}
           episode={s.node.frontmatter.episode}
           subject={s.node.frontmatter.subject}
+          event={s.node.frontmatter.event}
           htmlAst={s.node.htmlAst}
         />
       ))}

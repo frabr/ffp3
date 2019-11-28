@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons"
 import { Range, getTrackBackground } from "react-range"
 
-const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
+const Show = ({ title, show, episode, avec, url, htmlAst, subject, event }) => {
   const player = React.useRef(null)
   const [isPlaying, setIsPlaying] = React.useState(false)
   const [currentTime, setCurrentTime] = React.useState(0)
@@ -100,7 +100,7 @@ const Show = ({ title, show, episode, avec, url, htmlAst, subject }) => {
             >
               <div>
                 <h2 class="title is-4">“{title}”</h2>
-                <p class="subtitle is-6">{`${subject} avec ${avec}`}</p>
+                <p class="subtitle is-6">{`${event} avec ${avec}`}</p>
               </div>
               <div>
                 <p>

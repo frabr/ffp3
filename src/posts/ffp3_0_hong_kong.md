@@ -1,8 +1,9 @@
 ---
 date: "2019-10-24"
 avec: "Camille"
-subject: "Hong Kong"
-title: "Be water"
+event: "Hong Kong"
+subject: "No leader, be water"
+title: "No leader, be water"
 show: "FFP3"
 episode: 0
 categories :
@@ -16,5 +17,5 @@ status: "published"
 size: 57203328
 ---
 
-De retour de Hong Kong, Camille nous décrit un mouvement massif, cyber-horizontal et inventif. Une émission qui sent à la fois le XXIèm siècle et la guerre froide. </br>
+De retour de Hong Kong, Camille nous décrit un mouvement massif, cyber-horizontal et inventif. Une émission qui sent à la fois le XXIème siècle et la guerre froide. </br>
 Enregistré fin octobre 2019.

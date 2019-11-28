@@ -32,6 +32,8 @@ export default ({ data }) => {
         show={post.frontmatter.show}
         episode={post.frontmatter.episode}
         subject={post.frontmatter.subject}
+        event={post.frontmatter.event}
+
       />
     </html>
   )
@@ -52,6 +54,7 @@ export const query = graphql`
         show
         episode
         subject
+        event
       }
     }
   }
