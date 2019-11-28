@@ -1,8 +1,7 @@
 ---
 date: "2019-10-24"
 avec: "Camille"
-event: "Hong Kong"
-subject: "No leader, be water"
+subject: "Hong Kong"
 title: "No leader, be water"
 show: "FFP3"
 episode: 0

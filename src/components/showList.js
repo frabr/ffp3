@@ -28,7 +28,6 @@ const ShowList = () => {
               show
               episode
               subject
-              event
             }
             htmlAst
           }

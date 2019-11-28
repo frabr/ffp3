@@ -29,9 +29,10 @@ export default ({ data }) => {
           content="https://www.ffp3.live/embed/ffp3_0_hong_kong/"
         />
 
-        <meta name="twitter:player:width" content="500" />
+        <meta name="twitter:player:width" content="320" />
         <meta name="twitter:player:height" content="200" />
-        <meta name="twitter:title" content="Hong Kong" />
+        <meta name="twitter:image" content="https://www.ffp3.live/ffp3-white.png" />        
+        <meta name="twitter:title" content={post.frontmatter.title} />
       </Helmet>
       <body>
       <Hero/>
