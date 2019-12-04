@@ -74,7 +74,7 @@ const Hero = () => {
             margin: "30px auto",
           }}
         >
-          <a href="https://google.fr" style={{ margin: 10 }}>
+          <a href="https://podcasts.apple.com/fr/podcast/ffp3/id1489492312" style={{ margin: 10 }}>
             <button
               class="button is-small is-info is-family-sans-serif"
               style={{ width: 100 }}
