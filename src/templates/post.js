@@ -22,11 +22,11 @@ export default ({ data }) => {
         <meta name="twitter:card" content="player" />
         <meta
           name="twitter:player"
-          content={`https://www.ffp3.live/embed/ffp3_0_hong_kong`}
+          content={`https://www.ffp3.live/embed${post.fields.slug}`}
         />
         <meta
           name="twitter:secureurl:player_url"
-          content="https://www.ffp3.live/embed/ffp3_0_hong_kong/"
+          content={`https://www.ffp3.live/embed${post.fields.slug}`}
         />
 
         <meta name="twitter:player:width" content="320" />
@@ -43,20 +43,21 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      htmlAst
-      frontmatter {
-        status
-        avec
-        date
-        title
-        url
-        image
-        show
-        number
-        subject
-      }
+query($slug: String!) {
+  markdownRemark(fields: { slug: { eq: $slug } }) {
+    fields { slug }
+    htmlAst
+    frontmatter {
+      status
+      avec
+      date
+      title
+      url
+      image
+      show
+      number
+      subject
     }
   }
+}
 `
