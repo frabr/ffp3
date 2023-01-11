@@ -21,7 +21,7 @@
     "gatsby-plugin-sharp": "^2.2.31",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.23",
     "hast-to-hyperscript": "^7.0.3",
     "node-sass": "^4.13.0",
